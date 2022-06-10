@@ -9,7 +9,7 @@ pub struct NewTask<'a> {
 // NOTE: you can't just derive one struct from both Queryable and Insertable.
 // This would require us to set the id when we perform the insert, and we want
 // to let the database engine automatically assign the id
-#[derive(Queryable)]
+#[derive(Queryable, Serialize)]
 pub struct Task {
     pub id: i32,
     pub title: String,
